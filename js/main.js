@@ -64,7 +64,7 @@ const cross = document.querySelector('#cross');
 // Arrow
 const arrow = document.querySelector('.arrow');
 //
-const host = "https://radiant-twilight-6daffd.netlify.app/";
+const host = "https://moldemat.com/";
 const localhost = "http://127.0.0.1:5500/index.html";
 if ((window.location.href == host + 'index.html') || (window.location.href == host) || (window.location.href == localhost)) {
     window.onscroll = () => {
