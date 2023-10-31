@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moldemat - Servicios de Matriceria</title>
+    <meta name="description" content="Servicio de matricería de alta precisión en Buenos Aires. Matrices progresivas, cortantes y estampados. Moldes para inyección de termoplásticos y aluminio.">
+    <meta name="keywords" content="matriceria, moldes, molderia, matrices, mecanizado, matriceria de precision, matriceria aluminio, matriceria termoplasticos, electroerosion, matricería, matriceria buenos aires, matricería buenos aires, matriceria lanus, matricería lanus, matriceria argentina, matricería argentina"> <!-- Agregar Keywords -->
+    <meta name="robots" content="noindex">
+
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <!-- Google Fonts (Montserrat, Roboto, Ultra) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ultra&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="style/all.min.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Sidebar -->
+        <div class="reverse-hidden sidebar " style="display: none;" id="mySidebar">
+            <div class="sidebar-info">
+                <div class="sidebar-anchors">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <a class="button-contact" href="/contact.html">Contacto</a>
+                <div class="sidebar-number">
+                    <h4>Llamanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p>(54 11) 4246 2884</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="/index.html" class="logo">
+                <!-- Main Logo -->
+                <img class="logo-one" src="style/img/Logo_White.png" alt="Logo de Moldemat">
+                <img class="logo-two display-none" src="style/img/Logo_Black.png" alt="Logo de Moldemat">
+                <!-- Aca va el logo de otro color -->
+            </a>
+            <nav class="navbar-anchors hidden">
+                <a href="/servicios.html">Servicios</a>
+                <a href="/nosotros.html">Nosotros</a>
+                <a class="button-contact" href="/contact.html">Contacto</a>
+            </nav>
+
+            <div class="reverse-hidden bar-container">
+                <div class="bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-page-title" style="background-image: url(./style/img/Service_Banner.webp);">
+        <h3>Nuestros Servicios</h3>
+    </div>
+
+    <section class="service-page-main-card">
+        <div class="sm-card-img"><img src="./style/img/Service_Main.webp" alt="Matricería Moldemat"></div>
+        <div class="sm-card-text">
+            <h4>Matricería</h4>
+            <ul>
+                <li>Matricería de Corte</li>
+                <li>Matricería de Punzonado</li>
+                <li>Matricería de Embutido</li>
+                <li>Matricería de Estampado</li>
+                <li>Matricería Paso a Paso</li>
+                <li>Matricería Progresiva</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="service-page-cards">
+        <div class="service-page-card">
+            <div class="card-image"><img src="./style/img/Service_2.jpeg" alt="Matricería Moldemat"></div>
+            <h4>Asesoramiento</h4>
+            <p>Asesoramiento técnico para conseguir el producto deseado</p>
+            <a href="/contact.html">Contactanos</a>
+        </div>
+        <div class="service-page-card">
+            <div class="card-image"><img src="./style/img/Service_3.jpeg" alt="#"></div>
+            <h4>Diseño</h4>
+            <p>Diseño de Piezas metálicas y plásticas, y Diseño del herramental</p>
+            <a href="/contact.html">Contactanos</a>
+        </div>
+        <div class="service-page-card">
+            <div class="card-image"><img src="./style/img/Service_1.jpeg" alt="#"></div>
+            <h4>Moldes</h4>
+            <p>Fabricación de Moldes para Piezas Plásticas o de Aluminio</p>
+            <a href="/contact.html">Contactanos</a>
+        </div>
+    </section>
+
+    <section class="service-tools">
+        <div class="service-tools-text">
+            <h4>Maquinaria y Equipos</h4>
+            <ul>
+                <li>Electroerosionadora de Corte por Hilo SODICK/JAPAX</li>
+                <li>Electroerosionadora Royal ARC DM-323</li>
+                <li>Electroerosionadora EDM SPARK DM-323</li>
+                <li>Centro de Mecanizado C.N.C. TRAVIS</li>
+                <li>Fresadora por C.N.C. LAGUN NRO. 5</li>
+                <li>Fresadora FU2</li>
+                <li>Fresadora IMEPLA FUT3, con Lectores Digitales en las 3 Dimensiones</li>
+                <li>Agujereadora de Bandera CAIGA 12-45</li>
+                <li>Agujereadora de Bandera CAIGA 12-32</li>
+                <li>Agujereadora Radial IMEPLA PR 42</li>
+                <li>Torno de 1000MM. de Bancada</li>
+                <li>Rectificadora Tangencial APER RP-400</li>
+            </ul>
+        </div>
+        <div class="service-tools-img">
+            <img src="./style/img/Service_Tool.JPG" alt="Herramientas de Moldemat">
+        </div>
+    </section>
+
+    <div id="imagenes"></div>
+
+    <section class="service-process">
+        <h4>Galería de Fotos</h4>
+        <div class="service-process-cards">
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.23.40\ \(1\).jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_8860.JPG);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.39.06.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.46.17.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.46.27.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.52.14.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_2.jpg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_20.14.20.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_20.18.17.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_21.31.51.jpeg);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_8787.JPG);"></div>
+            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_8838.JPG);"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-info container">
+            <div class="footer-info-section hidden">
+                <h4>Moldemat</h4>
+                <p class="footer-about-text">Desde 1976 brindamos al mercado industrial Argentino sus servicios de matricería de precisión. Actualmente, gracias a la constante inversión, nos encontramos equipados con la tecnología necesaria para seguir asistiendo a nuestros clientes en su camino hacia el futuro.</p>
+            </div>
+            <div class="footer-info-section">
+                <h4>Servicios</h4>
+                <a href="/servicios.html">Nuestros Servicios</a>
+                <a href="/servicios.html#imagenes">Imagenes</a>
+                <a href="/contact.html">Contratanos</a>
+            </div>
+            <div class="footer-info-section">
+                <h4>Contacto</h4>
+                <div class="footer-phone">
+                    <p>Horario 8:00 a 16:00</p>
+                    <p>(54 11) 4246 2884</p>
+                </div>
+                <div class="footer-direction">
+                    <p>Las Piedras 2804</p>
+                    <p>Remedios De Escalada, Lanús</p>
+                    <p>Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+        <div class="baseboard">
+            <i class="fa-regular fa-copyright"></i>
+            <p class="no-margin">2023 Moldemat SRL. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- LeafletJS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Main Style -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

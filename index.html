@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moldemat - Servicio de Matriceria</title>
+    <meta name="description" content="Servicio de matricería de alta precisión en Buenos Aires. Matrices progresivas, cortantes y estampados. Moldes para inyección de termoplásticos y aluminio.">
+    <meta name="keywords" content="matriceria, moldes, molderia, matrices, mecanizado, matriceria de precision, matriceria aluminio, matriceria termoplasticos, electroerosion, matricería, matriceria buenos aires, matricería buenos aires, matriceria lanus, matricería lanus, matriceria argentina, matricería argentina"> <!-- Agregar Keywords -->
+    <meta name="robots" content="index">
+
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <!-- Google Fonts (Montserrat, Roboto, Ultra) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ultra&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="style/all.min.css">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="./style/img/Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Sidebar -->
+        <div class="reverse-hidden sidebar " style="display: none;" id="mySidebar">
+            <div class="sidebar-info">
+                <div class="sidebar-anchors">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <a class="button-contact" href="/contact.html">Contacto</a>
+                <div class="sidebar-number">
+                    <h4>Llamanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p>(54 11) 4246 2884</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="/index.html" class="logo">
+                <!-- Main Logo -->
+                <img class="logo-one" src="style/img/Logo_White.png" alt="Logo de Moldemat">
+                <img class="logo-two display-none" src="style/img/Logo_Black.png" alt="Logo de Moldemat">
+                <!-- Aca va el logo de otro color -->
+            </a>
+            <nav class="navbar-anchors hidden">
+                <a href="/servicios.html">Servicios</a>
+                <a href="/nosotros.html">Nosotros</a>
+                <a class="button-contact" href="/contact.html">Contacto</a>
+            </nav>
+
+            <div class="reverse-hidden bar-container">
+                <div class="bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-text container">
+            <h1>Matriceria de Precisión Fabricación de Matrices y Moldes</h1>
+            <a class="button-contact" href="/servicios.html">Conoce nuestros servicios</a>
+        </div>
+    </div>
+
+    <div class="arrow">
+        <i class="fa-solid fa-circle-down"></i>
+    </div>
+
+    <section class="about" data-aos="fade-right" data-aos-duration="1000">
+        <div class="about-info">
+            <div class="hidden about-img">
+                <img src="style/img/Fabrica.webp" alt="Fabrica Moldemat">
+            </div>
+            <div class="about-text text-margin">
+                <h4>Sobre Nosotros</h4>
+                <p>Desde 1976 brindamos al mercado industrial Argentino nuestros servicios de matricería de precisión. Actualmente, gracias a la constante inversión, nos encontramos equipados con la tecnología necesaria para seguir asistiendo a nuestros clientes en su camino hacia el futuro.</p>
+                <a href="/nosotros.html" class="see-more">Ver Más <i class="fa-solid fa-angle-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="example">
+        <img class="reverse-hidden" src="/style/img/Section_Example_Phone_2.png" alt="">
+        <img class="hidden" src="/style/img/Section_Example_2.png" alt="">
+    </div>
+
+    <section class="services" data-aos="fade-down" data-aos-duration="1000">
+        <h4>Nuestros Servicios</h4>
+        <div class="services-cards">
+            <div class="services-card" data-aos="fade-down" data-aos-delay="300" data-aos-duration="1000">
+                <a href="/servicios.html" class="services-icon"><i class="fa-solid fa-industry"></i></a>
+                <a href="/servicios.html" class="services-title">Asesoramiento</a>
+                <p>Asesoramiento Técnico y Diseño de Piezas Metálicas y Plásticas</p>
+                <a href="/servicios.html" class="see-more-services">Ver Más</a>
+            </div>
+
+            <div class="services-card" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000">
+                <a href="/servicios.html" class="services-icon"><i class="fa-solid fa-fire-flame-curved"></i></a>
+                <a href="/servicios.html" class="services-title">Matricería</a>
+                <p>Fabricación de Herramental (Matrices de Corte y/o Estampado, Moldes para Inyección de Plástico o Aluminio)</p>
+                <a href="/servicios.html" class="see-more-services">Ver Más</a>
+            </div>
+
+            <div class="services-card" data-aos="fade-down" data-aos-delay="900" data-aos-duration="1000">
+                <a href="/servicios.html" class="services-icon"><i class="fa-solid fa-gear"></i></a>
+                <a href="/servicios.html" class="services-title">Mas Servicios</a>
+                <p>Servicio de Mecanizado CNC y Corte por Hilo.</p>
+                <a href="/servicios.html" class="see-more-services">Ver Más</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="client" data-aos="fade-down" data-aos-duration="1000">
+        <div class="client-text">
+            <h4>Nuestros Clientes</h4>
+            <p>Empresas que confían en nosotros</p>
+            <a class="hidden" href="/nosotros.html#client">Conoce a Todos Nuestros Clientes</a>
+        </div>
+        <div class="client-content">
+            <div><img src="style/img/logos/Client_Logo_18.png" alt=""></div>
+            <div><img src="style/img/logos/Client_Logo_23.png" alt=""></div>
+            <div><img src="style/img/logos/Client_Logo_22.png" alt=""></div>
+            <div><img src="style/img/logos/Client_Logo_05.jpg" alt=""></div>
+            <div><img src="style/img/logos/Client_Logo_20.png" alt=""></div>
+            <div><img src="style/img/logos/Client_Logo_07.png" alt=""></div>
+        </div>
+        <a class="reverse-hidden" href="/nosotros.html#client">Conoce a Más Clientes</a>
+    </section>
+
+    <div class="example">
+        <img class="reverse-hidden" src="/style/img/Section_Example_Phone.png" alt="">
+        <img class="hidden" src="/style/img/Section_Example.png" alt="">
+    </div>
+
+    <section class="contact" data-aos="fade-down" data-aos-duration="1000">
+        <h4 class="contact-title">Contactanos</h4>
+        <div class="contact-info">
+            <div class="contact-form contact-info-div">
+                <form action="https://formsubmit.co/moldematsrl@gmail.com" method="POST"> <!-- Poner el codigo como mail oculto -->
+                    <!-- Para que llegue a una plataforma https://getform.io/f/e70f63f0-aa0f-4966-afc1-6bad255a8e22 -->
+                    <label for="fname">Nombre/s</label>
+                    <input type="text" id="fname" name="nombre" placeholder="Nombre">
+
+                    <label for="lname">Apellido/s</label>
+                    <input type="text" id="lname" name="apellido" placeholder="Apellido">
+
+                    <label for="phone">Numero de teléfono</label>
+                    <input type="number" id="phone" name="celular">
+
+                    <label for="mail">Correo Electrónico</label>
+                    <input type="email" id="mail" name="email">
+
+                    <label for="txtarea">Mensaje</label>
+                    <textarea name="txtarea" id="txtarea" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="Enviar">
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html"><!-- Cambiarlo por la pagina de moldemat -->
+                    <input type="hidden" name="_captcha" value="false"> 
+                </form>
+            </div>
+            <div class="contact-numbers">
+                <div class="contact-info-div">
+                    <h4>Llamanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p><i class="fa-solid fa-phone"></i> (54 11) 4246 2884</p>
+                    <h4 style="margin-top: 1rem;">Visitanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Las Piedras 2804, Lanús, Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="map"></div>
+
+    <footer class="footer">
+        <div class="footer-info container">
+            <div class="footer-info-section hidden">
+                <h4>Moldemat</h4>
+                <p class="footer-about-text">Desde 1976 brindamos al mercado industrial Argentino sus servicios de matricería de precisión. Actualmente, gracias a la constante inversión, nos encontramos equipados con la tecnología necesaria para seguir asistiendo a nuestros clientes en su camino hacia el futuro.</p>
+            </div>
+            <div class="footer-info-section">
+                <h4>Servicios</h4>
+                <a href="/servicios.html">Nuestros Servicios</a>
+                <a href="/servicios.html#imagenes">Imagenes</a>
+                <a href="/contact.html">Contratanos</a>
+            </div>
+            <div class="footer-info-section">
+                <h4>Contacto</h4>
+                <div class="footer-phone">
+                    <p>Horario 8:00 a 16:00</p>
+                    <p>(54 11) 4246 2884</p>
+                </div>
+                <div class="footer-direction">
+                    <p>Las Piedras 2804</p>
+                    <p>Remedios De Escalada, Lanús</p>
+                    <p>Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+        <div class="baseboard">
+            <i class="fa-regular fa-copyright"></i>
+            <p class="no-margin">2023 Moldemat SRL. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- LeafletJS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Main Style -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

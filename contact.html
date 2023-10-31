@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moldemat</title>
+
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+        integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+        crossorigin="" />
+    <!-- Google Fonts (Montserrat, Roboto, Ultra) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ultra&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="style/all.min.css">
+    <!-- Normalize -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <!-- Sidebar -->
+        <div class="reverse-hidden sidebar " style="display: none;" id="mySidebar">
+            <div class="sidebar-info">
+                <div class="sidebar-anchors">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Nosotros</a>
+                </div>
+                <a class="button-contact" href="/contact.html">Contacto</a>
+                <div class="sidebar-number">
+                    <h4>Llamanos</h4>
+                    <p>De 8:00 a 16:00 hs</p>
+                    <p>(54 11) 4246 2884</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="/index.html" class="logo">
+                <!-- Main Logo -->
+                <img class="logo-one" src="style/img/Logo_White.png" alt="Logo de Moldemat">
+                <img class="logo-two display-none" src="style/img/Logo_Black.png" alt="Logo de Moldemat">
+                <!-- Aca va el logo de otro color -->
+            </a>
+            <nav class="navbar-anchors hidden">
+                <a href="/servicios.html">Servicios</a>
+                <a href="/nosotros.html">Nosotros</a>
+                <a class="button-contact" href="/contact.html">Contacto</a>
+            </nav>
+
+            <div class="reverse-hidden bar-container">
+                <div class="bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-page-title" style="background-image: url(./style/img/Contact_Banner.webp);">
+        <h3>Contactanos</h3>
+    </div>
+
+    <section class="contact" style="margin-top: 3rem;">
+        <div class="contact-info">
+            <div class="contact-form contact-info-div">
+                <form action="https://formsubmit.co/moldematsrl@gmail.com" method="POST">
+                    <label for="fname">Nombre/s</label>
+                    <input type="text" id="fname" name="nombre" placeholder="Nombre">
+
+                    <label for="lname">Apellido/s</label>
+                    <input type="text" id="lname" name="apellido" placeholder="Apellido">
+
+                    <label for="phone">Numero de teléfono</label>
+                    <input type="number" id="phone" name="celular">
+
+                    <label for="mail">Correo Electrónico</label>
+                    <input type="email" id="mail" name="email">
+
+                    <label for="txtarea">Mensaje</label>
+                    <textarea name="txtarea" id="txtarea" cols="30" rows="10"></textarea>
+
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+            <div class="contact-numbers">
+                <div class="contact-info-div">
+                    <h4>Llamanos o Visitanos</h4>
+                    <p>De 8:00 a 16:00</p>
+                    <p>(54 11) 4246 2884</p>
+                    <p>Las Piedras 2804, Lanús</p>
+                </div>
+                <div class="contact-info-div">
+                    <h4>Como llegar</h4>
+                    <a href="https://www.google.com.ar/maps/place/Las+Piedras+2804,+B1825AON+Lanús,+Provincia+de+Buenos+Aires/@-34.7218178,-58.377049,17z/data=!3m1!4b1!4m6!3m5!1s0x95bccd4cf814843f:0xd3d5b96baa35d8d2!8m2!3d-34.7218178!4d-58.3744741!16s%2Fg%2F11c5mj4f_j?entry=ttu" target="_blank">Google Maps</a>
+                    <p>Colectivos: 526 - 299(S)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="map"></div>
+
+    <footer class="footer">
+        <div class="footer-info container">
+            <div class="footer-info-section hidden">
+                <h4>Moldemat</h4>
+                <p class="footer-about-text">Desde 1976 brindamos al mercado industrial Argentino sus servicios de matricería de precisión. Actualmente, gracias a la constante inversión, nos encontramos equipados con la tecnología necesaria para seguir asistiendo a nuestros clientes en su camino hacia el futuro.</p>
+            </div>
+            <div class="footer-info-section">
+                <h4>Servicios</h4>
+                <a href="/servicios.html">Nuestros Servicios</a>
+                <a href="/servicios.html#imagenes">Imagenes</a>
+                <a href="/contact.html">Contratanos</a>
+            </div>
+            <div class="footer-info-section">
+                <h4>Contacto</h4>
+                <div class="footer-phone">
+                    <p>Horario 8:00 a 16:00</p>
+                    <p>(54 11) 4246 2884</p>
+                </div>
+                <div class="footer-direction">
+                    <p>Las Piedras 2804</p>
+                    <p>Remedios De Escalada, Lanús</p>
+                    <p>Buenos Aires</p>
+                </div>
+            </div>
+        </div>
+        <div class="baseboard">
+            <i class="fa-regular fa-copyright"></i>
+            <p class="no-margin">2023 Moldemat SRL. Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <!-- LeafletJS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- Modernizr -->
+    <script src="js/modernizr.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Main Style -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
