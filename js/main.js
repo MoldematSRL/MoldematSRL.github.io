@@ -51,6 +51,11 @@ AOS.init({
 
 });
 
+// Envio de Formulario
+document.getElementById("formulario").addEventListener("submit", function() {
+    window.alert("Formulario enviado correctamente.");
+});
+
 // Navbar
 const navbar = document.querySelector('.header');
 // Logo

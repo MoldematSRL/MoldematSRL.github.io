@@ -74,7 +74,7 @@
     <section class="contact" style="margin-top: 3rem;">
         <div class="contact-info">
             <div class="contact-form contact-info-div">
-                <form action="https://formsubmit.co/moldematsrl@gmail.com" method="POST">
+                <form id="formulario" action="https://formsubmit.co/moldemat@moldemat.com" method="POST">
                     <label for="fname">Nombre/s</label>
                     <input type="text" id="fname" name="nombre" placeholder="Nombre">
 
@@ -91,6 +91,9 @@
                     <textarea name="txtarea" id="txtarea" cols="30" rows="10"></textarea>
 
                     <input type="submit" value="Enviar">
+
+                    <input type="hidden" name="_next" value="https://moldemat.com/index.html">
+                    <input type="hidden" name="_captcha" value="false"> 
                 </form>
             </div>
             <div class="contact-numbers">
