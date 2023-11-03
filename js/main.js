@@ -6,23 +6,6 @@ function changeBars(x) {
     sidebar.classList.toggle('display-sidebar');
 }
 
-// map.js
-function initMap() {
-    // LeaftletJS Map
-    var map = L.map('map').setView([-34.7217851, -58.3744177], 16);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '© OpenStreetMap'
-    }).addTo(map);
-    var marker = L.marker([-34.7217851, -58.3744177]).addTo(map);
-    marker.bindPopup("<b class='leafletb'>Direccion</b><br>Las Piedras 2804").openPopup();
-}
-
-// Llama a la función initMap en cada página donde quieras mostrar el mapa
-if (document.getElementById('map')) {
-    initMap();
-}
-
 // AOS
 AOS.init();
 
@@ -49,11 +32,6 @@ AOS.init({
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
-});
-
-// Envio de Formulario
-document.getElementById("formulario").addEventListener("submit", function() {
-    window.alert("Formulario enviado correctamente.");
 });
 
 // Navbar
