@@ -132,21 +132,34 @@
 
     <div id="imagenes"></div>
 
-    <section class="service-process">
-        <h4>Galería de Fotos</h4>
-        <div class="service-process-cards">
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.23.40\ \(1\).jpeg);"></div>
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_8860.JPG);"></div>
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.39.06.jpeg);"></div>
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.46.17.jpeg);"></div>
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.46.27.jpeg);"></div>
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_19.52.14.jpeg);"></div>
-            <div class="service-process-card" style="background-image: url(./style/img/Galery/Galery_2.jpg);"></div>
-            <div loading="lazy" class="service-process-card" style="background-image: url(./style/img/Galery/Galery_20.14.20.jpeg);"></div>
-            <div loading="lazy" class="service-process-card" style="background-image: url(./style/img/Galery/Galery_20.18.17.jpeg);"></div>
-            <div loading="lazy" class="service-process-card" style="background-image: url(./style/img/Galery/Galery_21.31.51.jpeg);"></div>
-            <div loading="lazy" class="service-process-card" style="background-image: url(./style/img/Galery/Galery_8787.JPG);"></div>
-            <div loading="lazy" class="service-process-card" style="background-image: url(./style/img/Galery/Galery_8838.JPG);"></div>
+    <section class="container service-gallery">
+        <h3>Galería de Fotos</h3>
+        <div class="gallery-content">
+
+            <div class="gallery-display" id="gallery-display">
+                <span class="close" id="close-gd">&times;</span>
+                <div class="gd-container">
+                    <img id="gd-content" class="gd-content">
+                </div>
+            </div>
+            
+            <div class="gallery">
+                <div class="gallery-wrapper">
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_01.jpeg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_19.39.06.jpeg" alt=""></div>
+                    <div class="tall"><img loading="lazy" src="./style/img/Gallery/Gallery_19.46.17.jpeg" alt=""></div>
+                    <div class="big"><img loading="lazy" src="./style/img/Gallery/Gallery_19.46.27.jpeg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_19.52.14.jpeg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_2.jpg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_20.14.20.jpeg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_20.18.17.jpeg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_21.31.51.jpeg" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_8787.JPG" alt=""></div>
+                    <div class="hidden"><img loading="lazy" src="./style/img/Gallery/Gallery_8838.JPG" alt=""></div>
+                    <div><img loading="lazy" src="./style/img/Gallery/Gallery_8860.JPG" alt=""></div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -193,6 +206,7 @@
       AOS.init();
     </script>
     <!-- Main Style -->
+    <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
 </body>
 
