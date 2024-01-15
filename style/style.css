@@ -107,7 +107,6 @@ h4 {
 /** HEADER **/
 /* Navbar */
 .header {
-    /*Header Fixed*/
     position: fixed;
     left: 0;
     top: 0;
@@ -751,10 +750,6 @@ h4 {
     .about-page-title {
         background-size: 100%;
         transition: background-size 0.3s ease;
-    }
-
-    .about-page-title:hover {
-        background-size: 120%;
     }
 
     .about-page-title h3 {

@@ -34,62 +34,71 @@ AOS.init({
 
 });
 
-// Navbar
-const navbar = document.querySelector('.header');
-// Logo
-const logoOne = document.querySelector('.logo-one');
-const logoTwo = document.querySelector('.logo-two');
-// Anchors
-const navbarAnchors = document.querySelector('.navbar-anchors');
-// Bars
-const bar = document.querySelector('.bars');
-const cross = document.querySelector('#cross');
-// Arrow
-const arrow = document.querySelector('.arrow');
+
 //
 const host = "https://moldemat.com/";
 const localhost = "http://127.0.0.1:5500/index.html";
-if ((window.location.href == host + 'index.html') || (window.location.href == host) || (window.location.href == localhost)) {
-    window.onscroll = () => {
-        if (window.scrollY > 100) {
-            // Navbar
-            navbar.classList.add('nav-active');
-            // Logo
-            logoOne.classList.add('display-none');
-            logoTwo.classList.remove('display-none');
-            // Anchors
-            navbarAnchors.classList.add('navbar-anchors-active');
-            // button-bars
-            bar.classList.add('button-active');
-            cross.classList.add('button-active');
-            // Arrow
-            arrow.classList.add('arrow-hide');
-        } else {
-            // Navbar
-            navbar.classList.remove('nav-active');
-            // Logo
-            logoTwo.classList.add('display-none');
-            logoOne.classList.remove('display-none');
-            // Anchors
-            navbarAnchors.classList.remove('navbar-anchors-active');
-            // button-bars
-            bar.classList.remove('button-active');
-            cross.classList.remove('button-active');
-            // Arrow
-            arrow.classList.remove('arrow-hide');
-        }
-    }
-} else {
+
+window.addEventListener('load', function () {
     // Navbar
-    navbar.classList.add('nav-active');
+    const navbar = document.querySelector('.header');
     // Logo
-    logoOne.classList.add('display-none');
-    logoTwo.classList.remove('display-none');
+    const logoOne = document.querySelector('.logo-one');
+    const logoTwo = document.querySelector('.logo-two');
     // Anchors
-    navbarAnchors.classList.add('navbar-anchors-active');
-    // button-bars
-    bar.classList.add('button-active');
-    cross.classList.add('button-active');
-}
+    const navbarAnchors = document.querySelector('.navbar-anchors');
+    // Bars
+    const bar = document.querySelector('.bars');
+    const cross = document.querySelector('#cross');
+    // Arrow
+    const arrow = document.querySelector('.arrow');
+
+    if ((window.location.href == host + 'index.html') || (window.location.href == host) || (window.location.href == localhost)) {
+        window.onscroll = () => {
+            if (window.scrollY > 100) {
+                // Navbar
+                navbar.classList.add('nav-active');
+                // Logo
+                logoOne.classList.add('display-none');
+                logoTwo.classList.remove('display-none');
+                // Anchors
+                navbarAnchors.classList.add('navbar-anchors-active');
+                // button-bars
+                bar.classList.add('button-active');
+                cross.classList.add('button-active');
+                // Arrow
+                arrow.classList.add('arrow-hide');
+            } else {
+                // Navbar
+                navbar.classList.remove('nav-active');
+                // Logo
+                logoTwo.classList.add('display-none');
+                logoOne.classList.remove('display-none');
+                // Anchors
+                navbarAnchors.classList.remove('navbar-anchors-active');
+                // button-bars
+                bar.classList.remove('button-active');
+                cross.classList.remove('button-active');
+                // Arrow
+                arrow.classList.remove('arrow-hide');
+            }
+        }
+    } else {
+        // Navbar
+        navbar.classList.add('nav-active');
+        // Logo
+        logoOne.classList.add('display-none');
+        logoTwo.classList.remove('display-none');
+        // Anchors
+        navbarAnchors.classList.add('navbar-anchors-active');
+        // button-bars
+        bar.classList.add('button-active');
+        cross.classList.add('button-active');
+    }
+});
+
+
+
+
 
 
