@@ -341,7 +341,7 @@ h4 {
 /** BANNER **/
 .banner {
     background: linear-gradient(to top, rgba(26, 26, 26, 0.05), rgba(0, 0, 0, 0.5)),
-        url(./img/Banner6.jpg);
+        url(./img/Banner6_Phone.jpg);
     height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -356,6 +356,8 @@ h4 {
 @media (min-width: 768px) {
     .banner {
         height: 90vh;
+        background: linear-gradient(to top, rgba(26, 26, 26, 0.05), rgba(0, 0, 0, 0.5)),
+        url(./img/Banner6.jpg);
     }
 }
 
