@@ -18,15 +18,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Ultra&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Ultra&display=swap"
         rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="style/all.min.css">
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Normalize -->
     <link rel="stylesheet" href="style/normalize.css">
     <!-- Main Style -->
+    <link rel="preload" href="./style/img/Banner6_Phone.jpg" as="image" media="(max-width: 767px)">
+    <link rel="preload" href="./style/img/Banner6.jpg" as="image" media="(min-width: 768px)">
     <link rel="stylesheet" href="style/style.css">
     <link rel="icon" href="./style/img/Favicon.png" type="image/x-icon">
 </head>
@@ -234,6 +234,8 @@
     <script>
       AOS.init();
     </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/92cb46368f.js" crossorigin="anonymous"></script>
     <!-- Main Style -->
     <script defer src="js/map.js"></script>
     <script defer src="js/form.js"></script>
